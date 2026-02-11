@@ -1,5 +1,4 @@
 import React from 'react';
-import { Menu } from 'lucide-react';
 
 const Header = () => {
     return (
@@ -9,8 +8,9 @@ const Header = () => {
             left: 0,
             width: '100%',
             zIndex: 1000,
-            backgroundColor: 'rgba(5, 5, 5, 0.95)',
-            padding: '20px 0'
+            backgroundColor: 'rgba(0, 0, 0, 0.9)',
+            borderBottom: '1px solid #222',
+            padding: '15px 0'
         }}>
             <div className="container" style={{
                 display: 'flex',
@@ -18,24 +18,30 @@ const Header = () => {
                 alignItems: 'center',
             }}>
                 {/* Logo Area */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    {/* Small version of the swirl icon */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+                    {/* Swirl Icon */}
                     <div style={{
-                        width: '30px',
-                        height: '30px',
+                        width: '40px',
+                        height: '40px',
                         borderRadius: '50%',
                         background: 'conic-gradient(from 0deg, #fd004c, #fe9000, #fff020, #3edf4b, #3363ff, #b102b7, #fd004c)',
                     }}></div>
-                    <span style={{ fontSize: '1.5rem', fontWeight: 'bold', letterSpacing: '1px' }}>SUMMIT</span>
+                    <span style={{ fontSize: '1.8rem', fontWeight: '900', letterSpacing: '2px', color: '#fff' }}>SUMMIT</span>
                 </div>
 
-                <div style={{ display: 'flex', gap: '20px', fontSize: '0.9rem', color: '#aaa', textTransform: 'uppercase' }}>
-                    <a href="#about" style={{ padding: '0 10px' }}>About</a>
-                    <a href="#events" style={{ padding: '0 10px' }}>Events</a>
-                    <a href="#agenda" style={{ padding: '0 10px' }}>Agenda</a>
+                <div style={{ display: 'flex', gap: '30px', fontSize: '0.9rem', color: '#ccc', textTransform: 'uppercase', fontWeight: '600' }}>
+                    <a href="#about" style={{ textDecoration: 'none', transition: 'color 0.2s' }}>About Us</a>
+                    <a href="#events" style={{ textDecoration: 'none', transition: 'color 0.2s' }}>Events</a>
+                    <a href="#agenda" style={{ textDecoration: 'none', transition: 'color 0.2s' }}>Agenda</a>
                 </div>
 
-                <button className="btn" style={{ fontSize: '0.9rem', padding: '8px 20px', background: '#0056b3' }}>Register</button>
+                <button className="btn" style={{
+                    fontSize: '0.9rem',
+                    padding: '10px 25px',
+                    background: '#0056b3',
+                    borderRadius: '0',
+                    fontWeight: 'bold'
+                }}>REGISTER</button>
             </div>
         </header>
     );
