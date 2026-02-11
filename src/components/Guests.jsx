@@ -2,28 +2,22 @@ import React from 'react';
 
 const Guests = () => {
     return (
-        <section style={{ padding: '80px 0', background: 'var(--bg-secondary)' }}>
+        <section style={{ padding: '80px 0', background: '#000' }}>
             <div className="container">
-                <h2 className="section-title">Our Recent Guests</h2>
+                <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '50px' }}>OUR RECENT GUESTS</h2>
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
-                    gap: '20px',
-                    justifyItems: 'center'
+                    gridTemplateColumns: 'repeat(4, 1fr)', // Strict 4 columns as per image
+                    gap: '15px',
                 }}>
                     {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
                         <div key={item} style={{
                             width: '100%',
-                            maxWidth: '150px',
-                            aspectRatio: '1/1',
-                            background: 'var(--bg-primary)',
-                            borderRadius: '10px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            border: '1px solid rgba(255, 255, 255, 0.1)'
+                            aspectRatio: '1/1', // Square boxes
+                            background: '#222', // Dark gray placeholder
+                            borderRadius: '4px',
+                            border: '1px solid #333'
                         }}>
-                            <span style={{ color: 'var(--text-secondary)' }}>Guest {item}</span>
                         </div>
                     ))}
                 </div>

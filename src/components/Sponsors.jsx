@@ -1,28 +1,25 @@
 import React from 'react';
 
 const Sponsors = () => {
+    // Generate a large grid of placeholders
+    const slots = Array.from({ length: 40 }, (_, i) => i);
+
     return (
-        <section id="sponsors" style={{ padding: '80px 0' }}>
+        <section id="sponsors" style={{ padding: '80px 0', background: '#000' }}>
             <div className="container">
-                <h2 className="section-title">Sponsors</h2>
+                <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '50px' }}>SPONSORS</h2>
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
-                    gap: '40px',
-                    justifyItems: 'center',
-                    alignItems: 'center'
+                    gridTemplateColumns: 'repeat(4, 1fr)',
+                    gap: '10px',
                 }}>
-                    {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
+                    {slots.map((item) => (
                         <div key={item} style={{
-                            width: '120px',
-                            height: '60px',
-                            background: 'rgba(255, 255, 255, 0.1)',
-                            borderRadius: '5px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center'
+                            width: '100%',
+                            aspectRatio: '1/1',
+                            background: '#333', // Darker gray per image
+                            borderRadius: '2px'
                         }}>
-                            <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '0.8rem' }}>LOGO {item}</span>
                         </div>
                     ))}
                 </div>

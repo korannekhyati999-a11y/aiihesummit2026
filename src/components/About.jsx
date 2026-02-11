@@ -1,22 +1,30 @@
 import React from 'react';
+import { Network, Users, Lightbulb } from 'lucide-react';
 
 const About = () => {
+    const cards = [
+        { icon: <Network size={32} color="#007bff" />, title: "CONNECT", text: "Network with industry leaders, professionals, and advocates in the accessibility space." },
+        { icon: <Users size={32} color="#007bff" />, title: "COLLABORATE", text: "Join forces to solve real-world challenges and create impactful solutions." },
+        { icon: <Lightbulb size={32} color="#007bff" />, title: "INNOVATE", text: "Explore cutting-edge technologies and ideas that are shaping the future of inclusion." }
+    ];
+
     return (
         <section id="about" style={{ padding: '80px 0' }}>
             <div className="container">
-                <h2 className="section-title">About Us</h2>
+                <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '50px' }}>ABOUT US</h2>
                 <div className="grid-cols-3">
-                    {[1, 2, 3].map((item) => (
-                        <div key={item} style={{
-                            background: 'var(--bg-secondary)',
+                    {cards.map((item, index) => (
+                        <div key={index} style={{
+                            background: '#111',
                             padding: '30px',
-                            borderRadius: '10px',
-                            border: '1px solid rgba(255, 255, 255, 0.05)',
-                            textAlign: 'center'
+                            borderRadius: '8px',
+                            borderTop: '3px solid #007bff',
+                            textAlign: 'left'
                         }}>
-                            <h3 style={{ marginBottom: '15px' }}>Topic Title {item}</h3>
-                            <p style={{ color: 'var(--text-secondary)' }}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Use this space to describe the summit's mission and goals.
+                            <div style={{ marginBottom: '20px' }}>{item.icon}</div>
+                            <h3 style={{ marginBottom: '15px', color: '#fff', fontSize: '1.2rem', textTransform: 'uppercase' }}>{item.title}</h3>
+                            <p style={{ color: '#aaa', fontSize: '0.9rem', lineHeight: '1.6' }}>
+                                {item.text}
                             </p>
                         </div>
                     ))}
