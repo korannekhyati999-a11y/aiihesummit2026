@@ -21,7 +21,7 @@ const Header = () => {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
                     {/* Swirl Icon */}
 
-                    <span style={{ fontSize: '1.8rem', fontWeight: '900', letterSpacing: '2px', color: '#fff' }}>SUMMIT</span>
+                    <span style={{ fontSize: '1.8rem', fontWeight: '900', letterSpacing: '2px', color: '#ff0000' }}>SUMMIT</span>
                 </div>
 
                 <div style={{ display: 'flex', gap: '30px', fontSize: '0.9rem', color: '#ccc', textTransform: 'uppercase', fontWeight: '600' }}>

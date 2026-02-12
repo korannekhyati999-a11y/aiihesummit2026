@@ -36,21 +36,20 @@ const Hero = () => {
                                 visible: {
                                     opacity: 1,
                                     transition: {
-                                        staggerChildren: 0.3, // Slower stagger
+                                        staggerChildren: 0.1, // Faster stagger
                                         delayChildren: 0.2
                                     }
                                 }
                             }}
                         >
                             {Array.from("SUMMIT").map((char, index) => {
-                                const colors = ["#fd004c", "#fe9000", "#fff020", "#3edf4b", "#3363ff", "#b102b7"];
                                 return (
                                     <motion.span
                                         key={index}
-                                        style={{ color: colors[index % colors.length] }}
+                                        style={{ color: '#ff0000' }} // Red color
                                         variants={{
-                                            hidden: { opacity: 0, x: '-100vw' }, // Extreme left
-                                            visible: { opacity: 1, x: 0, transition: { duration: 2, ease: "easeOut" } } // Slow entry
+                                            hidden: { opacity: 0, x: '-100vw' },
+                                            visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } } // Fast entry
                                         }}
                                     >
                                         {char}
