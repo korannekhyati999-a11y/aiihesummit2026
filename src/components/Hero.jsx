@@ -27,7 +27,7 @@ const Hero = () => {
                                 margin: 0,
                                 textTransform: 'uppercase',
                                 display: 'flex',
-                                overflow: 'hidden' // optional, keeps it clean
+                                overflow: 'hidden'
                             }}
                             initial="hidden"
                             animate="visible"
@@ -36,23 +36,27 @@ const Hero = () => {
                                 visible: {
                                     opacity: 1,
                                     transition: {
-                                        staggerChildren: 0.2, // increased stagger
+                                        staggerChildren: 0.3, // Slower stagger
                                         delayChildren: 0.2
                                     }
                                 }
                             }}
                         >
-                            {Array.from("SUMMIT").map((char, index) => (
-                                <motion.span
-                                    key={index}
-                                    variants={{
-                                        hidden: { opacity: 0, x: -100 },
-                                        visible: { opacity: 1, x: 0, transition: { duration: 1.5, ease: "easeOut" } }
-                                    }}
-                                >
-                                    {char}
-                                </motion.span>
-                            ))}
+                            {Array.from("SUMMIT").map((char, index) => {
+                                const colors = ["#fd004c", "#fe9000", "#fff020", "#3edf4b", "#3363ff", "#b102b7"];
+                                return (
+                                    <motion.span
+                                        key={index}
+                                        style={{ color: colors[index % colors.length] }}
+                                        variants={{
+                                            hidden: { opacity: 0, x: '-100vw' }, // Extreme left
+                                            visible: { opacity: 1, x: 0, transition: { duration: 2, ease: "easeOut" } } // Slow entry
+                                        }}
+                                    >
+                                        {char}
+                                    </motion.span>
+                                );
+                            })}
                         </motion.h1>
                     </div>
 
