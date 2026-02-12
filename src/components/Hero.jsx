@@ -18,14 +18,42 @@ const Hero = () => {
                     {/* Logo Row */}
                     <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '1rem' }}>
 
-                        <h1 style={{
-                            fontSize: '5.5rem',
-                            fontWeight: '900',
-                            letterSpacing: '4px',
-                            lineHeight: '1',
-                            margin: 0,
-                            textTransform: 'uppercase'
-                        }}>SUMMIT</h1>
+                        <motion.h1
+                            style={{
+                                fontSize: '5.5rem',
+                                fontWeight: '900',
+                                letterSpacing: '4px',
+                                lineHeight: '1',
+                                margin: 0,
+                                textTransform: 'uppercase',
+                                display: 'flex',
+                                overflow: 'hidden' // optional, keeps it clean
+                            }}
+                            initial="hidden"
+                            animate="visible"
+                            variants={{
+                                hidden: { opacity: 1 },
+                                visible: {
+                                    opacity: 1,
+                                    transition: {
+                                        staggerChildren: 0.1,
+                                        delayChildren: 0.2
+                                    }
+                                }
+                            }}
+                        >
+                            {Array.from("SUMMIT").map((char, index) => (
+                                <motion.span
+                                    key={index}
+                                    variants={{
+                                        hidden: { opacity: 0, y: 50 },
+                                        visible: { opacity: 1, y: 0, transition: { type: "spring", damping: 12, stiffness: 100 } }
+                                    }}
+                                >
+                                    {char}
+                                </motion.span>
+                            ))}
+                        </motion.h1>
                     </div>
 
                     <motion.div
