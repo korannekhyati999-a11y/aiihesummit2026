@@ -36,7 +36,7 @@ const Hero = () => {
                                 visible: {
                                     opacity: 1,
                                     transition: {
-                                        staggerChildren: 0.1,
+                                        staggerChildren: 0.2, // increased stagger
                                         delayChildren: 0.2
                                     }
                                 }
@@ -46,8 +46,8 @@ const Hero = () => {
                                 <motion.span
                                     key={index}
                                     variants={{
-                                        hidden: { opacity: 0, y: 50 },
-                                        visible: { opacity: 1, y: 0, transition: { type: "spring", damping: 12, stiffness: 100 } }
+                                        hidden: { opacity: 0, x: -100 },
+                                        visible: { opacity: 1, x: 0, transition: { duration: 1.5, ease: "easeOut" } }
                                     }}
                                 >
                                     {char}
