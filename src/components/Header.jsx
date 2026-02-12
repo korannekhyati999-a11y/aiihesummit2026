@@ -20,12 +20,7 @@ const Header = () => {
                 {/* Logo Area */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
                     {/* Swirl Icon */}
-                    <div style={{
-                        width: '40px',
-                        height: '40px',
-                        borderRadius: '50%',
-                        background: 'conic-gradient(from 0deg, #fd004c, #fe9000, #fff020, #3edf4b, #3363ff, #b102b7, #fd004c)',
-                    }}></div>
+
                     <span style={{ fontSize: '1.8rem', fontWeight: '900', letterSpacing: '2px', color: '#fff' }}>SUMMIT</span>
                 </div>
 

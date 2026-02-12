@@ -17,13 +17,7 @@ const Hero = () => {
                 <div style={{ textAlign: 'left', maxWidth: '800px' }}>
                     {/* Logo Row */}
                     <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '1rem' }}>
-                        <div style={{
-                            width: '60px',
-                            height: '60px',
-                            borderRadius: '50%',
-                            background: 'conic-gradient(from 0deg, #fd004c, #fe9000, #fff020, #3edf4b, #3363ff, #b102b7, #fd004c)',
-                            boxShadow: '0 0 20px rgba(255, 255, 255, 0.2)'
-                        }}></div>
+
                         <h1 style={{
                             fontSize: '5.5rem',
                             fontWeight: '900',
